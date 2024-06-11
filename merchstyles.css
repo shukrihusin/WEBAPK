@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(to right, lightblue, brown);
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.icon .cart-count, .icon .wishlist-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff4500;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main {
+    padding: 20px 0;
+}
+
+.merchandise {
+    background: #fff;
+    padding: 20px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.merch-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.merch-items-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.merch-item {
+    flex: 0 0 200px;
+    margin-right: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.merch-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.merch-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.merch-title {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.learn-more, .add-to-cart {
+    background: linear-gradient(to right, #ff6347, #ff4500);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.learn-more:hover, .add-to-cart:hover {
+    background: linear-gradient(to right, #ff4500, #ff6347);
+}
+
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #ff4500;
+    font-size: 20px;
+}
+
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cart-summary {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#cart-total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.checkout-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+.cart.hidden {
+    display: none;
+}
+
+.footer {
+    background: linear-gradient(to right, grey, blue);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-icons li {
+    margin: 0 10px;
+}
+
+.footer-social-icons li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social-icons li a i {
+    margin-right: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

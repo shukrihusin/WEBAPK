@@ -1,0 +1,817 @@
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+		
+.news-item:hover .news-content {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+        header {
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: #fff;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+/* Rest of the existing styles */
+
+
+        header:hover {
+            background: linear-gradient(45deg, #2196F3, #4CAF50);
+        }
+
+        header h1 {
+            float: left;
+        }
+
+        .icon-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .icon-container .icon {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+.hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image path */
+    background-size: cover; /* Cover the entire section with the background image */
+    background-position: center; /* Center the background image */
+    animation: slideBackground 20s linear infinite alternate;
+}
+
+@keyframes slideBackground {
+    0% {
+        background-position: top left;
+    }
+    100% {
+        background-position: bottom right;
+    }
+}
+
+
+		.hero-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: #fff; /* Set text color to white for better contrast */
+		}
+
+
+        .slides {
+            display: flex;
+            width: 300%;
+            transition: transform 1s;
+        }
+
+        .slide {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            height: 400px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+		.explore-button {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: linear-gradient(45deg, #4CAF50, #2196F3);
+			color: #fff;
+			padding: 12px 24px; /* Increased padding for better clickability */
+			border: none;
+			border-radius: 30px; /* Increased border radius for a more rounded look */
+			font-size: 18px; /* Increased font size for better readability */
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.explore-button:hover {
+			background: linear-gradient(45deg, #2196F3, #4CAF50);
+		}
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        .section-content h2 {
+            margin-bottom: 10px;
+        }
+
+        .section-content form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section-content input[type="text"],
+        .section-content input[type="email"],
+        .section-content textarea {
+            width: calc(50% - 10px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .section-content textarea {
+            height: 100px;
+        }
+
+        .section-content input[type="submit"] {
+            width: 100%;
+            background: #2196F3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Styles for live sports section */
+        .live-sports {
+            margin-top: 20px;
+        }
+
+        .live-sports h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .live-sports-list {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .live-sport {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .live-sport h3 {
+            margin-bottom: 10px;
+        }
+
+        .watch-now-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .watch-now-btn:hover {
+            background-color: #0b7dda;
+        }
+
+/* Merchandise Section */
+.merchandise {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.merchandise .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.merchandise .section-heading {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.merch-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.merch-items-container {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.merch-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.merch-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.merch-item:hover img {
+    transform: scale(1.05);
+}
+
+.action-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-icons .wishlist-icon, .action-icons .cart-icon {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.action-icons .wishlist-icon:hover, .action-icons .cart-icon:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.action-icons i {
+    font-size: 18px;
+    color: #333;
+}
+
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wishlist-icon:hover {
+    background-color: #ff3b2f;
+}
+
+.merch-title {
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.learn-more {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #0056b3;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.merch-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.merch-slider {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Styles for review section*/
+.review {
+    background-color: #f5f5f5;
+    padding: 4rem 0;
+}
+
+.review .container {
+    text-align: center;
+}
+
+.review .section-heading {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.review-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea.form-control {
+    height: 150px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+.ecommerce-footer {
+    background-color: #f4f4f4;
+    padding: 30px 0;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .footer-column {
+    flex: 1 1 300px;
+    margin-right: 30px;
+}
+
+.footer .footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+.footer-social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social-icons li {
+    margin-right: 15px;
+}
+
+.footer-social-icons li:last-child {
+    margin-right: 0;
+}
+
+.footer-social-icons a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+
+
+.news-session {
+    padding: 4rem 0;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    position: relative;
+}
+
+.news-items-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px; /* Add some padding at the bottom to avoid clipping */
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-item {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust as needed */
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.news-content {
+    padding: 20px;
+}
+
+.news-content h3 {
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    color: #666;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+.news-session .section-heading {
+    margin-bottom: 30px;
+}
+
+.news-session .news-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-session .news-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.news-session .news-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.news-session .news-item p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.news-session .news-item .read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.news-session .news-item .read-more-btn:hover {
+    background-color: #0b7dda;
+}
+
+        /* Additional Styles for Events Section */
+        .events-items-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .event-item {
+            flex: 0 0 calc(33.33% - 20px);
+            margin-bottom: 40px; /* Adjust spacing between event items */
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .event-item img {
+            width: 100%;
+            border-radius: 8px;
+            animation: animateImage 2s infinite alternate; /* Animation for the images */
+        }
+
+        .event-content {
+            margin-top: 20px;
+        }
+
+        .event-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .event-content p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .event-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .event-btn:hover {
+            background-color: #555;
+        }
+
+        @keyframes animateImage {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+		
+		/* Sports Video and Animation Section */
+.sports-video-animation {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+.sports-video-animation .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sports-video-animation .section-heading {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.sports-video-animation .video-container {
+    margin-bottom: 40px;
+}
+
+.sports-video-animation .video-container video {
+    max-width: 100%;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sports-video-animation .animation-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sports-video-animation .animation-container h3 {
+    font-size: 2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.sports-video-animation .animation-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sports-video-animation .animation-content lottie-player {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 3px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add this code to your CSS file */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    display: none;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: buzz 0.5s ease-in-out;
+}
+
+@keyframes buzz {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}

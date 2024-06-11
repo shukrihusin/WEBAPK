@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .sport-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .sport-card {
+            width: calc(33.33% - 20px);
+            margin-bottom: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .sport-card:hover {
+            transform: translateY(-5px);
+        }
+        .sport-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .sport-title {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .sport-link {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            border-radius: 0 0 5px 5px;
+            transition: background-color 0.3s ease;
+        }
+        .sport-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Explore Merchandise by Sport</h1>
+    <div class="sport-container">
+        <!-- Sport 1 -->
+        <div class="sport-card">
+            <img src="badminton2.jpg" alt="Sport 1" class="sport-image">
+            <h2 class="sport-title">Badminton Store</h2>
+            <a href="#" class="sport-link" onclick="shopNow('badminton.html')">Shop Now</a>
+        </div>
+        <!-- Sport 2 -->
+        <div class="sport-card">
+            <img src="volleyball3.jpg" alt="Sport 2" class="sport-image">
+            <h2 class="sport-title">Volleyball Store</h2>
+            <a href="#" class="sport-link" onclick="shopNow('volleyballlocal.html')">Shop Now</a>
+        </div>
+        <!-- Sport 3 -->
+        <div class="sport-card">
+            <img src="bowling2.jpg" alt="Sport 3" class="sport-image">
+            <h2 class="sport-title">Bowling Store</h2>
+            <a href="#" class="sport-link" onclick="shopNow('bowling.html')">Shop Now</a>
+        </div>
+        <!-- Sport 4 -->
+        <div class="sport-card">
+            <img src="trackandfield2.jpg" alt="Sport 4" class="sport-image">
+            <h2 class="sport-title">Track & FIeld Store</h2>
+            <a href="#" class="sport-link" onclick="shopNow('trackandfield.html')">Shop Now</a>
+        </div>
+        <!-- Sport 5 -->
+        <div class="sport-card">
+            <img src="football2.jpg" alt="Sport 5" class="sport-image">
+            <h2 class="sport-title">Football Store</h2>
+            <a href="#" class="sport-link" onclick="shopNow('merchandise.html')">Shop Now</a>
+        </div>
+        <!-- Sport 6 -->
+        <div class="sport-card">
+            <img src="takraw2.jpg" alt="Sport 6" class="sport-image">
+            <h2 class="sport-title">Takraw Store</h2>
+            <a href="#" class="sport-link" onclick="shopNow('takraw.html')">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function shopNow(url) {
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>

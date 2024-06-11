@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Merchandise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="merchstyles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+<header id="header">
+    <div class="container">
+        <h1 class="logo">Badminton Merchandise</h1>
+        <div class="icon-container">
+            <div class="icon cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="icon wishlist-icon" onclick="toggleWishlist()">
+                <i class="fas fa-heart"></i>
+                <span class="wishlist-count">0</span>
+            </div>
+            <i class="fas fa-search icon" onclick="toggleSearch()"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Merchandise</a></li>
+                <li><a href="#" class="nav-link">Sport News</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="merchandise">
+        <div class="container">
+            <h2 class="section-heading">Badminton Racket</h2>
+            <div class="merch-slider">
+                <div class="merch-items-container">
+                    <!-- Badminton merchandise items here -->
+                    <div class="merch-item">
+                        <img src="raket1.jpg" alt="Li Ning Air Force G3 44">
+                        <div class="wishlist-icon" onclick="addToWishlist('Li Ning Air Force G3 44')">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="merch-title">Li Ning Air Force G3 44</p>
+                        <button class="add-to-cart" onclick="addToCart('Li Ning Air Force G3 44', 209.00)">Add to Cart</button>
+                    </div>
+                    <div class="merch-item">
+                        <img src="raket2.jpg" alt="Li Ning Air Force79 G3 44">
+                        <div class="wishlist-icon" onclick="addToWishlist('Li Ning Air Force79 G3 44')">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="merch-title">Li Ning Air Force79 G3 44</p>
+                        <button class="add-to-cart" onclick="addToCart('Li Ning Air Force79 G3 44', 299.99)">Add to Cart</button>
+                    </div>
+					<div class="merch-item">
+                        <img src="raket3.jpg" alt="Li Ning Air Force77 G3 44">
+                        <div class="wishlist-icon" onclick="addToWishlist('Li Ning Air Force77 G3 44')">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="merch-title">Li Ning Air Force77 G3 44</p>
+                        <button class="add-to-cart" onclick="addToCart('Li Ning Air Force77 G3 44', 229.00)">Add to Cart</button>
+                    </div>
+					<div class="merch-item">
+                        <img src="raket4.jpg" alt="Yonex Nanoflare 001 Clear Badminton Racket">
+                        <div class="wishlist-icon" onclick="addToWishlist('Yonex Nanoflare 001 Clear Badminton Racket')">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="merch-title">Yonex Nanoflare 001 Clear Badminton Racket</p>
+                        <button class="add-to-cart" onclick="addToCart('Yonex Nanoflare 001 Clear Badminton Racket', 169.00)">Add to Cart</button>
+                    </div>
+					<div class="merch-item">
+                        <img src="raket5.jpg" alt="Yonex nanoflare 001 Feel Badminton Racket">
+                        <div class="wishlist-icon" onclick="addToWishlist('Yonex nanoflare 001 Feel Badminton Racket')">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="merch-title">Yonex nanoflare 001 Feel Badminton Racket</p>
+                        <button class="add-to-cart" onclick="addToCart('Yonex nanoflare 001 Feel Badminton Racket', 169.00)">Add to Cart</button>
+                    </div>
+					<div class="merch-item">
+                        <img src="raket7.jpg" alt="Yonex Nanoflare 001 Ability Badminton Racket">
+                        <div class="wishlist-icon" onclick="addToWishlist('Yonex Nanoflare 001 Ability Badminton Racket')">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="merch-title">Yonex Nanoflare 001 Ability Badminton Racket</p>
+                        <button class="add-to-cart" onclick="addToCart('Yonex Nanoflare 001 Ability Badminton Racket', 239.00)">Add to Cart</button>
+                    </div>
+					<div class="merch-item">
+                        <img src="raket8.jpg" alt="Li Ning Tectonic 3 Badminton Racket">
+                        <div class="wishlist-icon" onclick="addToWishlist('Li Ning Tectonic 3 Badminton Racket')">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="merch-title">Li Ning Tectonic 3 Badminton Racket</p>
+                        <button class="add-to-cart" onclick="addToCart('Li Ning Tectonic 3 Badminton Racket', 369.00)">Add to Cart</button>
+                    </div>
+					<div class="merch-item">
+                        <img src="raket1.jpg" alt="Li Ning XP 2020 Badminton Racket">
+                        <div class="wishlist-icon" onclick="addToWishlist('Li Ning XP 2020 Badminton Racket')">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="merch-title">Li Ning XP 2020 Badminton Racket</p>
+                        <button class="add-to-cart" onclick="addToCart('Li Ning XP 2020 Badminton Racket', 69.99)">Add to Cart</button>
+                    </div>
+                    <!-- Add more badminton merchandise items here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="merchandise">
+        <div class="container">
+            <h2 class="section-heading">Badminton Shoes</h2>
+            <div class="merch-slider">
+                <div class="merch-items-container">
+                    <!-- Badminton shoe items here -->
+                    <!-- Add more shoe items here -->
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="merchandise">
+        <div class="container">
+            <h2 class="section-heading">Badminton Jersey</h2>
+            <div class="merch-slider">
+                <div class="merch-items-container">
+                    <!-- Badminton jersey items here -->
+                    <!-- Add more jersey items here -->
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="merchandise">
+        <div class="container">
+            <h2 class="section-heading">Shuttlecocks</h2>
+            <div class="merch-slider">
+                <div class="merch-items-container">
+                    <!-- Shuttlecock items here -->
+                    <!-- Add more shuttlecock items here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cart" class="cart hidden">
+        <div class="container">
+            <h2 class="section-heading">Shopping Cart</h2>
+            <div class="cart-items-container"></div>
+            <div class="cart-summary">
+                <p>Total: <span id="cart-total">$0.00</span></p>
+                <button class="checkout-button" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="wishlist" class="wishlist hidden">
+        <div class="container">
+            <h2 class="section-heading">Wishlist</h2>
+            <div class="wishlist-items-container"></div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul class="footer-social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Badminton Merchandise. All rights reserved by Asas.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+<script src="merchscript.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

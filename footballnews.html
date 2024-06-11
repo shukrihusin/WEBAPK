@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            overflow-x: hidden; /* Disable horizontal scrollbar */
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: #fff;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header:hover {
+            background: linear-gradient(45deg, #2196F3, #4CAF50);
+        }
+
+        .icon-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .icon-container .icon {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        .news-session {
+            padding: 4rem 0;
+            background-color: #f8f8f8;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .news-item {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .news-content {
+            margin-top: 20px;
+        }
+
+        .news-content h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .news-content p {
+            color: #666;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <h1 class="logo"><a href="sports_website.html" class="nav-link">Sports Website</a></h1>
+        <div class="icon-container">
+            <i class="fas fa-shopping-cart icon" onclick="toggleCart()"></i>
+            <i class="fas fa-heart icon" onclick="toggleWishlist()"></i>
+            <i class="fas fa-search icon" onclick="toggleSearch()"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Merchandise</a></li>
+                <li><a href="#" class="nav-link">Sport News</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="news-session">
+        <div class="container">
+            <div class="news-item" onclick="showNewsDetails('football')">
+                <img src="gambarbola.jpg" alt="Football News">
+                <div class="news-content">
+                    <h3>Breaking News: Safawi and Akhyar Transfer to Terengganu Club</h3>
+                    <p>Exciting news in the football world as two Malaysian stars, Safawi Rasid and Akhyar Rashid, make a surprising move to Terengganu Football Club. This unexpected transfer has sent shockwaves through the Malaysian football scene, sparking discussions and debates among fans and pundits alike.</p>
+                    <a href="footballnews.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Sports Website. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+<script>
+    // JavaScript functions
+    function toggleCart() {
+        console.log("Toggling cart");
+    }
+    
+    function toggleWishlist() {
+        console.log("Toggling wishlist");
+    }
+    
+    function toggleSearch() {
+        console.log("Toggling search");
+    }
+</script>
+</body>
+</html>

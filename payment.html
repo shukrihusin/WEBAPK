@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        main {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .payment-form {
+            display: inline-block;
+            text-align: left;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .payment-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .payment-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-form input[type="text"],
+        .payment-form input[type="number"],
+        .payment-form input[type="date"],
+        .payment-form select {
+            width: calc(100% - 22px); /* Adjust for padding */
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .payment-form select {
+            width: 100%;
+        }
+
+        .payment-form button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .payment-form button:hover {
+            background-color: #45a049;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .payment-methods img {
+            width: 100px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .payment-methods img:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Payment</h1>
+</header>
+
+<main>
+    <div class="payment-form">
+        <h2>Payment Information</h2>
+        <form id="payment-form" onsubmit="processPayment(event)">
+            <label for="total-price">Total Price:</label>
+            <input type="text" id="total-price" name="total-price" value="$100.00" readonly>
+            <div class="payment-methods">
+                <img src="visa.jpg" alt="Visa" onclick="selectPaymentMethod('visa')">
+                <img src="mastercard.png" alt="Mastercard" onclick="selectPaymentMethod('mastercard')">
+                <img src="paypal.png" alt="PayPal" onclick="selectPaymentMethod('paypal')">
+                <img src="cod.png" alt="Cash on Delivery" onclick="selectPaymentMethod('cash_on_delivery')">
+            </div>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required>
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="date" id="expiry-date" name="expiry-date" required>
+            <label for="cvv">CVV:</label>
+            <input type="number" id="cvv" name="cvv" required>
+            <label for="card-holder-name">Cardholder Name:</label>
+            <input type="text" id="card-holder-name" name="card-holder-name" required>
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+</main>
+
+<script>
+    function selectPaymentMethod(method) {
+        const paymentMethods = document.querySelectorAll('.payment-methods img');
+        paymentMethods.forEach(img => img.style.opacity = 1); // Reset opacity for all images
+        document.getElementById('payment-method').value = method;
+    }
+
+    function processPayment(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Validate form fields
+        const cardNumber = document.getElementById('card-number').value.trim();
+        const expiryDate = document.getElementById('expiry-date').value.trim();
+        const cvv = document.getElementById('cvv').value.trim();
+        const cardHolderName = document.getElementById('card-holder-name').value.trim();
+
+        if (cardNumber === '' || expiryDate === '' || cvv === '' || cardHolderName === '') {
+            alert('Please fill out all fields.');
+            return;
+        }
+
+        // Simulate payment processing (replace with actual payment processing logic)
+        setTimeout(function() {
+            alert('Payment successful! Your receipt will be emailed to you.');
+            const receipt = generateReceipt();
+            console.log(receipt);
+            window.location.href = 'confirmation.html'; // Redirect to confirmation page
+        }, 2000); // Simulate 2-second delay for processing
+    }
+
+    function generateReceipt() {
+        const totalPrice = document.getElementById('total-price').value;
+        const paymentMethod = document.getElementById('payment-method').value;
+        const cardNumber = document.getElementById('card-number').value;
+        const cardHolderName = document.getElementById('card-holder-name').value;
+
+        let receipt = `Payment Receipt:\n\n`;
+        receipt += `Total Price: ${totalPrice}\n`;
+        receipt += `Payment Method: ${paymentMethod}\n`;
+        if (paymentMethod !== 'cash_on_delivery') {
+            receipt += `Card Number: ${cardNumber}\n`;
+            receipt += `Cardholder Name: ${cardHolderName}\n`;
+        }
+        return receipt;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('football.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the entire viewport */
+    background-color: #f4f4f4;
+}
+header {
+    background: #a3d171;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #347c1a, 0 0 30px #347c1a, 0 0 40px #347c1a, 0 0 50px #347c1a, 0 0 60px #347c1a;
+    animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #347c1a, 0 0 30px #347c1a, 0 0 40px #347c1a, 0 0 50px #347c1a, 0 0 60px #347c1a;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #347c1a, 0 0 30px #347c1a, 0 0 40px #347c1a, 0 0 50px #347c1a, 0 0 60px #347c1a, 0 0 70px #347c1a;
+    }
+}
+        nav {
+    display: flex;
+    justify-content: center;
+    background: #396925;
+}
+
+nav a, .dropdown {
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover, .dropdown:hover > a {
+    background: #80d36f;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color:#80d36f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .content {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .content h2 {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .content p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Football</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="events.html">Events</a>
+        <div class="dropdown">
+            <a href="#">Sports</a>
+            <div class="dropdown-content">
+                <a href="football.html">Football</a>
+                <a href="volleyball.html">Volleyball</a>
+                <a href="basketball.html">Basketball</a>
+                <a href="hockey.html">Hockey</a>
+                <a href="tennis.html">Tennis</a>
+                <a href="swimming.html">Swimming</a>
+            </div>
+        </div>
+        <a href="contact.html">Contact</a>
+        <a href="store.html">Store</a>
+        <a href="about.html">About</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Football</h2>
+            <p>Football, also known as soccer in some countries, is a globally popular sport with a rich history and millions of fans. Discover the latest news, match updates, and player profiles here.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2>FA Cup Final Highlights: Manchester City 1 - 2 Manchester United</h2>
+            <p>Experience the full enjoyment by watching the highlights of the FA Cup Final: Manchester City 1 - 2 Manchester United!</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-l3Kg5gIRk0?si=o6MbRmnl6EHIEjKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 International Sports. All rights reserved.</p>
+    </footer>
+</body>
+</html>

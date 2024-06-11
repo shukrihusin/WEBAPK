@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadium Booking Form</title>
+    <link rel="stylesheet" href="form1.css">
+</head>
+<body>
+    <div class="booking-form">
+        <h2>Stadium Booking Form</h2>
+        <form id="bookingForm" class="form-container">
+            <div class="form-group">
+                <label for="stadiumName">Stadium Name:</label>
+                <input type="text" id="stadiumName" name="stadiumName" readonly>
+            </div>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Subscribe to newsletter</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="form2.js"></script>
+</body>
+</html>

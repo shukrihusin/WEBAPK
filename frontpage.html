@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="frontstyle.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+<header id="header">
+    <div class="container">
+        <h1 class="logo">Sports Website</h1>
+        <div class="icon-container">
+            <i class="fas fa-shopping-cart icon" onclick="toggleCart()"></i>
+            <i class="fas fa-heart icon" onclick="toggleWishlist()"></i>
+            <i class="fas fa-search icon" onclick="toggleSearch()"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="frontpage.html" class="nav-link">Home</a></li>
+                <li><a href="merchandise2.html" class="nav-link">Merchandise</a></li>
+                <li><a href="#" class="nav-link">Sport News</a></li>
+                <li><a href="aboutus.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Container for dropdown items -->
+    <div id="dropdown-container"></div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Sports Website</h2>
+            <p>Explore the latest news, live sports, and merchandise.</p>
+        </div>
+    </section>
+
+    <section class="live-sports">
+        <div class="container">
+            <h2 class="section-heading">Live Sports TV Channels on Astro</h2>
+            <div class="live-sports-list">
+                <div class="live-sport">
+                    <img src="astroarena.jpg" alt="Astro Arena">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Astro Arena</h3>
+                            <p>Local and international sports coverage.</p>
+                            <a href="https://content.astro.com.my/channels/Astro-Arena-HD-235" class="watch-now-btn">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="live-sport">
+                    <img src="astrosuper.jpg" alt="Astro Supersport">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Astro Supersport</h3>
+                            <p>Premier League, UEFA Champions League, and more.</p>
+                            <a href="https://content.astro.com.my/channels/Astro-SuperSport-3-HD-164" class="watch-now-btn">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="live-sport">
+                    <img src="foxastro.jpg" alt="Fox Sports">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Fox Sports</h3>
+                            <p>Wide range of international sports events.</p>
+                            <a href="https://www.foxsports.com/live" class="watch-now-btn">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="merchandise">
+    <div class="container">
+        <h2 class="section-heading">Merchandise Section</h2>
+        <div class="merch-slider">
+            <div class="merch-items-container">
+                <div class="merch-item">
+                    <img src="badmintonjersey.jpg" alt="Badminton Merchandise">
+                    <div class="wishlist-icon" onclick="addToWishlist('Badminton Merchandise')">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="merch-title">Badminton Merchandise</p>
+                    <button href="badminton.html" class="learn-more" onclick="learnMore('Badminton Merchandise')">Learn More</button>
+                </div>
+                <div class="merch-item">
+                    <img src="footballjersi.jpg" alt="Football Merchandise">
+                    <div class="wishlist-icon" onclick="addToWishlist('Football Merchandise')">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="merch-title">Football Merchandise</p>
+                    <button class="learn-more" onclick="learnMore('Football Merchandise')">Learn More</button>
+                </div>
+                <div class="merch-item">
+                    <img src="volleyballjersey.jpg" alt="Volleyball Merchandise">
+                    <div class="wishlist-icon" onclick="addToWishlist('Volleyball Merchandise')">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="merch-title">Volleyball Merchandise</p>
+                    <button class="learn-more" onclick="learnMore('Volleyball Merchandise')">Learn More</button>
+                </div>
+                <div class="merch-item">
+                    <img src="bowlingjersey.jpg" alt="Bowling Merchandise">
+                    <div class="wishlist-icon" onclick="addToWishlist('Bowling Merchandise')">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="merch-title">Bowling Merchandise</p>
+                    <button class="learn-more" onclick="learnMore('Bowling Merchandise')">Learn More</button>
+                </div>
+                <div class="merch-item">
+                    <img src="trackjersey.jpg" alt="Track and Field Merchandise">
+                    <div class="wishlist-icon" onclick="addToWishlist('Track and Field Merchandise')">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="merch-title">Track And Field Merchandise</p>
+                    <button class="learn-more" onclick="learnMore('Track and Field Merchandise')">Learn More</button>
+                </div>
+                <div class="merch-item">
+                    <img src="takrawjersey.jpg" alt="Takraw Merchandise">
+                    <div class="wishlist-icon" onclick="addToWishlist('Takraw Merchandise')">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="merch-title">Sepak Takraw Merchandise</p>
+                    <button class="learn-more" onclick="learnMore('Takraw Merchandise')">Learn More</button>
+                </div>
+                <!-- Add more jersey merchandise items here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="news-session">
+        <div class="container">
+            <h2 class="section-heading">Latest News</h2>
+            <div class="news-items-container">
+                <div class="news-item" onclick="showNewsDetails('football')">
+                    <img src="gambarbola.jpg" alt="Football News">
+                    <div class="news-content">
+                        <h3>Exciting Football News</h3>
+                        <p>Read about the latest events and updates in the football world.</p>
+                        <a href="https://youtu.be/ffB4YLd3-EQ?si=RyGtmKLtAwLEKI6L" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="news-item" onclick="showNewsDetails('basketball')">
+                    <img src="volleyball.jpg" alt="Volleyball News">
+                    <div class="news-content">
+                        <h3>Breaking Volleyball News</h3>
+                        <p>Stay updated with the latest happenings in the volleyball scene.</p>
+                        <a href="https://www.youtube.com/watch?v=8hvBqolJB_w" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="news-item" onclick="showNewsDetails('tennis')">
+                    <img src="badminton.jpg" alt="Badminton News">
+                    <div class="news-content">
+                        <h3>Badminton Championship Update</h3>
+                        <p>Find out who emerged victorious in the recent badminton championships.</p>
+                        <a href="https://www.thestar.com.my/news/nation/2024/05/03/thomas-cup-malaysians-rally-to-support-badminton-team-in-semi-finals-tomorrow" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="news-item" onclick="showNewsDetails('track')">
+                    <img src="trackandfield.jpg" alt="Track and Field News">
+                    <div class="news-content">
+                        <h3>Track and Field Update</h3>
+                        <p>Find out who emerged victorious in the recent track and field championships.</p>
+                        <a href="https://www.youtube.com/watch?v=qAFf4DxNBCA" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="news-item" onclick="showNewsDetails('bowling')">
+                    <img src="bowling.jpg" alt="Bowling News">
+                    <div class="news-content">
+                        <h3>Bowling Update</h3>
+                        <p>Find out who emerged victorious in the recent bowling championships.</p>
+                        <a href="https://www.nst.com.my/sports/others/2023/10/967490/malaysia-miss-out-womens-bowling-team-gold-world-championships" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="news-item" onclick="showNewsDetails('takraw')">
+                    <img src="sepaktakraw.jpg" alt="Takraw News">
+                    <div class="news-content">
+                        <h3>Takraw Update</h3>
+                        <p>Find out who emerged victorious in the recent takraw championships.</p>
+                        <a href="https://www.nst.com.my/sports/others/2024/05/1055658/thailand-tames-malaysia-win-team-title-sepak-takraw-world-cup" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-arrows">
+                <button class="left-arrow" onclick="scrollNews('left')">&lt;</button>
+                <button class="right-arrow" onclick="scrollNews('right')">&gt;</button>
+            </div>
+        </div>
+    </section>
+
+<section class="sports-video-animation">
+    <div class="container">
+        <h2 class="section-heading">Sports Highlights</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="animation-container">
+            <h3>Check Out This Cool Animation!</h3>
+            <div class="animation-content">
+                <!-- Embed a sports animation using Lottie or a similar tool -->
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="events">
+    <div class="container">
+        <h2 class="section-heading">Book Main Stadium in Each State</h2>
+        <div class="events-items-container">
+            <div class="event-item">
+                <img src="bukitjalil.jpeg" alt="Stadium 1">
+                <div class="event-content">
+                    <h3>Stadium Bukit Jalil, Kuala Lumpur</h3>
+                    <p>Details: Capacity 87,411. Located in Kuala Lumpur.</p>
+                    <button class="event-btn" onclick="redirectToBookingForm('Stadium Bukit Jalil, Kuala Lumpur')">Book Now</button>
+                </div>
+            </div>
+            <div class="event-item">
+                <img src="johorstadium.jpg" alt="Stadium 2">
+                <div class="event-content">
+                    <h3>Sultan Ibrahim Stadium, Johor</h3>
+                    <p>Details: Capacity 40,000. Located in Iskandar Puteri, Johor.</p>
+                    <button class="event-btn" onclick="redirectToBookingForm('Sultan Ibrahim Stadium, Johor')">Book Now</button>
+                </div>
+            </div>
+            <div class="event-item">
+                <img src="terengganustadium.jpg" alt="Stadium 3">
+                <div class="event-content">
+                    <h3>Sultan Mizan Zainal Abidin Stadium, Terengganu</h3>
+                    <p>Details: Capacity 50,000. Located in Kuala Nerus, Terengganu.</p>
+                    <button class="event-btn" onclick="redirectToBookingForm('Sultan Mizan Zainal Abidin Stadium, Terengganu')">Book Now</button>
+                </div>
+            </div>
+            <div class="event-item">
+				<img src="pahangstadium.jpg" alt="Stadium 4">
+				<div class="event-content">
+					<h3>Darul Makmur Stadium, Kuantan</h3>
+					<p>Details: Capacity 40,000. Located in Kuantan, Pahang.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Darul Makmur Stadium, Kuantan')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="perakstadium.jpg" alt="Stadium 5">
+				<div class="event-content">
+					<h3>Perak Stadium, Ipoh</h3>
+					<p>Details: Capacity 42,500. Located in Ipoh, Perak.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Perak Stadium, Ipoh')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="kedahstadium.jpg" alt="Stadium 6">
+				<div class="event-content">
+					<h3>Darul Aman Stadium, Alor Setar</h3>
+					<p>Details: Capacity 32,387. Located in Alor Setar, Kedah.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Darul Aman Stadium, Alor Setar')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="kelantanstadium.png" alt="Stadium 7">
+				<div class="event-content">
+					<h3>Sultan Muhammad IV Stadium, Kota Bharu</h3>
+					<p>Details: Capacity 22,000. Located in Kota Bharu, Kelantan.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Sultan Muhammad IV Stadium, Kota Bharu')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="n9stadium.jpg" alt="Stadium 8">
+				<div class="event-content">
+					<h3>Tuanku Abdul Rahman Stadium, Paroi</h3>
+					<p>Details: Capacity 40,000. Located in Seremban, Negeri Sembilan.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Tuanku Abdul Rahman Stadium, Paroi')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="melakastadium.jpg" alt="Stadium 9">
+				<div class="event-content">
+					<h3>Hang Tuah Stadium, Melaka City</h3>
+					<p>Details: Capacity 40,000. Located in Melaka City, Melaka.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Hang Tuah Stadium, Melaka City')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="selangorstadium.jpg" alt="Stadium 10">
+				<div class="event-content">
+					<h3>Shah Alam Stadium, Shah Alam</h3>
+					<p>Details: Capacity 80,372. Located in Shah Alam, Selangor.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Shah Alam Stadium, Shah Alam')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="perlisstadium.jpg" alt="Stadium 11">
+				<div class="event-content">
+					<h3>Tuanku Syed Putra Stadium, Kangar</h3>
+					<p>Details: Capacity 20,000. Located in Kangar, Perlis.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Tuanku Syed Putra Stadium, Kangar')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="sabahstadium.jpg" alt="Stadium 12">
+				<div class="event-content">
+					<h3>Likas Stadium, Kota Kinabalu</h3>
+					<p>Details: Capacity 35,000. Located in Kota Kinabalu, Sabah.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Likas Stadium, Kota Kinabalu')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="sarawakstadium.jpg" alt="Stadium 13">
+				<div class="event-content">
+					<h3>Sarawak Stadium, Kuching</h3>
+					<p>Details: Capacity 40,000. Located in Kuching, Sarawak.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Sarawak Stadium, Kuching')">Book Now</button>
+				</div>
+			</div>
+			<div class="event-item">
+				<img src="penangstadium.jpg" alt="Stadium 14">
+				<div class="event-content">
+					<h3>Penang City Stadium, George Town</h3>
+					<p>Details: Capacity 40,000. Located in George Town, Penang.</p>
+					<button class="event-btn" onclick="redirectToBookingForm('Penang City Stadium, George Town')">Book Now</button>
+				</div>
+			</div>
+        </div>
+    </div>
+</section>
+
+<section class="review">
+            <div class="container">
+                <h2 class="section-heading">Customer Reviews</h2>
+                <div class="review-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Review" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Submit Review</button>
+                    </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul class="footer-social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sports Website. All rights reserved by Asas.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Notification containers -->
+<div id="cart-notification" class="notification"></div>
+<div id="wishlist-notification" class="notification"></div>
+
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+<script src="frontjava.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

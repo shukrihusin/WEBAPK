@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(120deg, rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), url('homebackground.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientText 3s ease-in-out infinite;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        p.lead {
+            font-size: 1.5em;
+            color: #f1c40f;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 2s ease-in-out;
+            position: relative;
+        }
+
+        .btn-sports {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            border-radius: 50px;
+            margin: 15px;
+            transition: all 0.3s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-international {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+
+        .btn-national {
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: rotate(45deg);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .btn:hover:before {
+            opacity: 1;
+            top: -20%;
+            left: -20%;
+        }
+
+        .spinner-border {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: 10px;
+            display: none;
+        }
+
+        .tooltip-inner {
+            background-color: #1e3c72;
+            color: #fff;
+            border: 1px solid #2a5298;
+        }
+
+        .hover-image {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hover-image.international {
+            left: -250px;
+        }
+
+        .hover-image.national {
+            right: -250px;
+        }
+
+        .btn-international:hover ~ .hover-image.international {
+            opacity: 1;
+        }
+
+        .btn-national:hover ~ .hover-image.national {
+            opacity: 1;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9em;
+            color: #ddd;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        /* Moving sports elements animation */
+        .sports-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .sports-element {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            opacity: 0.7;
+            animation: moveElement 20s linear infinite;
+        }
+
+        .sports-element.football {
+            background: url('football-icon.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        .sports-element.basketball {
+            background: url('basketball-icon.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        @keyframes moveElement {
+            0% { transform: translateY(-100px) translateX(-100px) rotate(0deg); }
+            100% { transform: translateY(110vh) translateX(110vw) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="sports-elements">
+        <div class="sports-element football" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="sports-element basketball" style="left: 30%; animation-delay: 3s;"></div>
+        <div class="sports-element football" style="left: 50%; animation-delay: 5s;"></div>
+        <div class="sports-element basketball" style="left: 70%; animation-delay: 7s;"></div>
+        <div class="sports-element football" style="left: 90%; animation-delay: 10s;"></div>
+    </div>
+    <div class="container">
+        <h1>Welcome to Sports Hub</h1>
+        <p class="lead">Choose a category to explore:</p>
+        <div>
+            <a href="about.html" class="btn btn-sports btn-international btn-lg mx-2" data-toggle="tooltip" data-placement="top" title="Explore International Sports Teams">
+                <i class="fas fa-globe icon"></i>International Teams
+            </a>
+            <a href="frontpage.html" class="btn btn-sports btn-national btn-lg mx-2" data-toggle="tooltip" data-placement="top" title="Explore National Sports Teams">
+                <i class="fas fa-flag icon"></i>National Teams
+            </a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Sports Hub. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+</html>
